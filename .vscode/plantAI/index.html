@@ -48,14 +48,6 @@
 					</div>
 				</div>
 			</section>
-			<script>
-				let defaultPic = document.getElementById("default");
-				let plantPic = document.getElementById("input-file");
-				inputFile.onchange = function(){
-					defaultPic.src = URL.createObjectURL(inputFile.files[0]);
-				}
-
-			</script>
 
 		<!-- Two -->
 			<section id="two" class="main style2">
@@ -121,6 +113,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				let defaultFile = document.getElementById("default");
+				let inputFile = document.getElementById("input-file");
+				inputFile.onchange = function(){
+					defaultFile.src = URL.createObjectURL(inputFile.files[0]);
+				}
 
+			</script>
 	</body>
 </html>
