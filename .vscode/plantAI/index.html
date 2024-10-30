@@ -23,7 +23,9 @@
 					<p>placeholder<br />
 						placeholder.</p>
 					<ul class="actions special">
-						<a href="#one" class="button scrolly">Upload Image</a>
+						<label  for = "input-file" class="button scrolly">Upload Image</label>
+						<input type = "file" accept= "image/jpeg, image/jpeg, image/png" id = "input-file" style="display:none;">
+						
 					</ul>
 				</div>
 			</section>
@@ -40,11 +42,20 @@
 							<p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+							<span  class="image fit"><img  id = "default" src="images/pic01.jpg" alt="" /></span>
+						
 						</div>
 					</div>
 				</div>
 			</section>
+			<script>
+				let defaultPic = document.getElementById("default");
+				let plantPic = document.getElementById("input-file");
+				inputFile.onchange = function(){
+					defaultPic.src = URL.createObjectURL(inputFile.files[0]);
+				}
+
+			</script>
 
 		<!-- Two -->
 			<section id="two" class="main style2">
